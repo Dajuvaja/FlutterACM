@@ -17,7 +17,9 @@ class _WidgetWithStateState extends State<WidgetWithState> {
           title: const Text('Tarjeta de Presentación'),
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {});
+              },
               icon: const Icon(Icons.add),
             ),
           ],
@@ -33,7 +35,7 @@ class _WidgetWithStateState extends State<WidgetWithState> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      height: 300,
+                      height: 350,
                       width: 200,
                       decoration: BoxDecoration(
                         border: Border.all(
@@ -45,6 +47,9 @@ class _WidgetWithStateState extends State<WidgetWithState> {
                         'https://i.imgur.com/itmXsOI.png',
                         fit: BoxFit.fill,
                       ),
+                    ),
+                    const SizedBox(
+                      width: 10,
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
