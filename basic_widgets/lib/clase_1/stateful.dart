@@ -18,11 +18,11 @@ class _WidgetWithStateState extends State<WidgetWithState> {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.add),
+              icon: const Icon(Icons.add),
             ),
           ],
         ),
-        body: Container(
+        body: SizedBox(
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
