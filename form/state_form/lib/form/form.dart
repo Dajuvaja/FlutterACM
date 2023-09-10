@@ -193,7 +193,7 @@ class _FormExampleState extends State<FormExample> {
                               });
                             }
                           },
-                          child: const Text('Mostrar información en pop-up'),
+                          child: const Text('Mostrar pop-up'),
                         ),
                         ElevatedButton(
                           onPressed: () {
