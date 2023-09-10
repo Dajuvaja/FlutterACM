@@ -35,7 +35,7 @@ class _WidgetWithStateState extends State<WidgetWithState> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      height: 350,
+                      height: 320,
                       width: 200,
                       decoration: BoxDecoration(
                         border: Border.all(
@@ -51,9 +51,9 @@ class _WidgetWithStateState extends State<WidgetWithState> {
                     const SizedBox(
                       width: 10,
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Text(
                           'DANIEL VARGAS',
                           style: TextStyle(
