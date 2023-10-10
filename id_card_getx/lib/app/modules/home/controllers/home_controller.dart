@@ -2,11 +2,11 @@ import 'package:basic_utils/basic_utils.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  var nameRx = RxString('Daniel Vargas');
-  var ageRx = RxInt(21);
-  var nationalityRx = RxString('Colombiana');
-  var birthdateRx = RxString('Marzo 25');
-  var residenceCountryRx = RxString('Colombia');
+  final nameRx = 'Daniel Vargas'.obs;
+  final ageRx = RxInt(21);
+  final nationalityRx = RxString('Colombiana');
+  final birthdateRx = RxString('Marzo 25');
+  final residenceCountryRx = RxString('Colombia');
 
   void changeInformation() {
     nameRx.value = nameRx.toUpperCase();

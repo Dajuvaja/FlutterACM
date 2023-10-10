@@ -12,7 +12,6 @@ class HomeView extends GetView<HomeController> {
   final String nacionalidad = 'Colombiana';
   final String nacimiento = 'Marzo 25';
   final String paisResidencia = 'Colombia';
-  final HomeController homeController = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -33,15 +32,15 @@ class HomeView extends GetView<HomeController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const StrongTextWidget(label: 'Nombre'),
-                    Obx(() => Text(homeController.nameRx.value)),
+                    Obx(() => Text(controller.nameRx.value)),
                     const StrongTextWidget(label: 'Edad'),
-                    Obx(() => Text(homeController.ageRx.value.toString())),
+                    Obx(() => Text(controller.ageRx.value.toString())),
                     const StrongTextWidget(label: 'Nacionalidad'),
-                    Obx(() => Text(homeController.nationalityRx.value)),
+                    Obx(() => Text(controller.nationalityRx.value)),
                     const StrongTextWidget(label: 'Fecha de nacimiento'),
-                    Obx(() => Text(homeController.birthdateRx.value)),
+                    Obx(() => Text(controller.birthdateRx.value)),
                     const StrongTextWidget(label: 'País de residencia'),
-                    Obx(() => Text(homeController.residenceCountryRx.value)),
+                    Obx(() => Text(controller.residenceCountryRx.value)),
                   ],
                 ),
                 SizedBox(
@@ -54,13 +53,13 @@ class HomeView extends GetView<HomeController> {
             const SizedBox(height: 35),
             CustomButton(
               onPressed: () {
-                homeController.changeInformation();
+                controller.changeInformation();
               },
               label: 'Colocar info en mayúscula',
             ),
             CustomButton(
               onPressed: () {
-                homeController.changeInformationBack();
+                controller.changeInformationBack();
               },
               label: 'Capitalizar información',
             ),
