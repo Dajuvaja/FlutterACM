@@ -1,0 +1,29 @@
+name: form_example_getx
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: ">=3.1.1 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get: 4.6.6
+  intl: ^0.18.1
+  get_storage: ^2.1.1
+  firebase_core: ^2.16.0
+  firebase_auth: ^4.2.9
+  cloud_firestore: ^4.4.3
+  firebase_storage: ^11.0.14
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

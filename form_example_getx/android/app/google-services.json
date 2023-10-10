@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "381170127015",
+    "project_id": "acm-form",
+    "storage_bucket": "acm-form.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381170127015:android:fcbd3918083f04e3498b82",
+        "android_client_info": {
+          "package_name": "app.ud.form_example_getx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXdTtkddWUGTL3BDGPN90ROwLG7IY8pq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
