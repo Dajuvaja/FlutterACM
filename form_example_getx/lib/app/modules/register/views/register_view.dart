@@ -67,10 +67,23 @@ class RegisterView extends GetView<RegisterController> {
   }
 
   loginButton() {
-    return CustomButton(
-      onPressed: controller.register,
-      label: 'Registrarme',
-    );
+    return Obx(() {
+      final isLoading = controller.isLoadingRx.isFalse;
+      final buttonColor = isLoading ? Colors.grey : Colors.blueAccent;
+      return CustomButton(
+        onPressed: isLoading
+            ? null
+            : () async {
+                print(controller.isLoadingRx.value);
+                controller.isLoadingRx.value = false;
+                await Future.delayed(const Duration(milliseconds: 1300));
+                controller.register();
+              },
+        label: 'Registrarse',
+        buttonColor: buttonColor,
+        estado: controller.isLoadingRx.value,
+      );
+    });
   }
 
   returnButton() {

@@ -3,9 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onPressed, required this.label});
-  final void Function() onPressed;
+  const CustomButton({
+    super.key,
+    required this.onPressed,
+    required this.label,
+    required this.buttonColor,
+    required this.estado,
+  });
+  final void Function()? onPressed;
   final String label;
+  final Color buttonColor;
+  final bool? estado;
 
   @override
   Widget build(BuildContext context) {
@@ -14,15 +22,19 @@ class CustomButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Colors.blueAccent,
+          color: buttonColor,
         ),
         height: 50,
         width: Get.width - 40,
         child: Center(
-          child: Text(
-            label,
-            style: const TextStyle(color: Colors.white),
-          ),
+          child: (estado == false)
+              ? const CircularProgressIndicator(
+                  color: Colors.white,
+                )
+              : Text(
+                  label,
+                  style: const TextStyle(color: Colors.white),
+                ),
         ),
       ),
     );

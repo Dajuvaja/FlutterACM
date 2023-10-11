@@ -7,6 +7,7 @@ class LoginController extends GetxController {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  final isLoadingRx = true.obs;
 
   login() async {
     if (formKey.currentState!.validate()) {
