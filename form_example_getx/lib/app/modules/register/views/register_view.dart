@@ -74,6 +74,7 @@ class RegisterView extends GetView<RegisterController> {
         onPressed: isLoading
             ? null
             : () async {
+                // ignore: avoid_print
                 print(controller.isLoadingRx.value);
                 controller.isLoadingRx.value = false;
                 await Future.delayed(const Duration(milliseconds: 1300));

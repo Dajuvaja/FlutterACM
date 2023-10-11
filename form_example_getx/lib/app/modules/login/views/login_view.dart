@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:form_example_getx/app/modules/login/controllers/login_controller.dart';
 import 'package:form_example_getx/app/widgets/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 class LoginView extends GetView<LoginController> {
   const LoginView({super.key});
@@ -41,7 +40,7 @@ class LoginView extends GetView<LoginController> {
   /// Título del Login
   title() {
     return const Text(
-      'Inicia sesión',
+      'Inicia Sesión',
       style: TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 24,
@@ -98,6 +97,7 @@ class LoginView extends GetView<LoginController> {
         onPressed: isLoading
             ? null
             : () async {
+                // ignore: avoid_print
                 print(controller.isLoadingRx.value);
                 controller.isLoadingRx.value = false;
                 await Future.delayed(const Duration(milliseconds: 1300));

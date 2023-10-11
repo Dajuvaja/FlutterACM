@@ -15,6 +15,7 @@ class LoginController extends GetxController {
           .signIn(
               email: emailController.text, password: passwordController.text)
           .then((value) {
+        // ignore: avoid_print
         print(value);
         if (value is String) {
           GetSnackBar(
@@ -22,6 +23,7 @@ class LoginController extends GetxController {
             message: value,
             duration: const Duration(seconds: 3),
           );
+          // ignore: avoid_print
           print('Algo falló');
         } else {
           Get.offAllNamed(Routes.HOME);
